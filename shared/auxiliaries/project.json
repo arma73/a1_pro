@@ -1,0 +1,34 @@
+{
+  "name": "shared-auxiliaries",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "shared/auxiliaries/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/shared/auxiliaries",
+        "main": "shared/auxiliaries/src/index.ts",
+        "tsConfig": "shared/auxiliaries/tsconfig.lib.json",
+        "assets": ["shared/auxiliaries/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["shared/auxiliaries/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["coverage/shared/auxiliaries"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/shared/auxiliaries"
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@standalone/shared/auxiliaries": ["shared/auxiliaries/src/index.ts"],
+      "@standalone/shared/components": ["shared/components/src/index.ts"],
+      "@standalone/shared/hooks": ["shared/hooks/src/index.ts"],
+      "@standalone/shared/interfaces": ["shared/interfaces/src/index.ts"],
+      "@standalone/shared/store": ["shared/store/src/index.ts"],
+      "@standalone/shared/ui": ["shared/ui/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

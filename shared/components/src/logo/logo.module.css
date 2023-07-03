@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.icon {
+  color: rgba(255, 255, 255, 1);
+  width: 66.666667%;
+  width: 100px;
+  height: 100px;
+}

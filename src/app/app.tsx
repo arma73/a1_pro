@@ -1,13 +1,21 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.css';
+import { Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { PublicLayout } from '@standalone/shared/components';
+import store from '@standalone/shared/store';
+import { HomePage, GamePage } from '../pages';
 
-import NxWelcome from './nx-welcome';
+import './app.css';
 
 export function App() {
   return (
-    <div>
-      <NxWelcome title="standalone" />
-    </div>
+    <Provider store={store}>
+      <Routes>
+        <Route path="/" element={<PublicLayout />}>
+          <Route index element={<HomePage />} />
+          <Route path=":provider/:id" element={<GamePage />} />
+        </Route>
+      </Routes>
+    </Provider>
   );
 }
 

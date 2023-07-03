@@ -1,0 +1,40 @@
+.box {
+  padding: 2.5rem 2rem;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.bgPrimary {
+  background-color: var(--primary-color);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.margin-md {
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.margin-sm {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}

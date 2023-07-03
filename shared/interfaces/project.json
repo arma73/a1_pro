@@ -1,0 +1,34 @@
+{
+  "name": "shared-interfaces",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "shared/interfaces/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/shared/interfaces",
+        "main": "shared/interfaces/src/index.ts",
+        "tsConfig": "shared/interfaces/tsconfig.lib.json",
+        "assets": ["shared/interfaces/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["shared/interfaces/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["coverage/shared/interfaces"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/shared/interfaces"
+      }
+    }
+  },
+  "tags": []
+}
